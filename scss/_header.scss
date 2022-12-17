@@ -1,0 +1,35 @@
+.header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.header-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 100px;
+    padding: 0 10%;
+    img {
+        max-width: 45%;
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header-items {
+        flex-direction: column-reverse;
+        gap:10px;
+        img {
+            max-width: 100%;
+            margin: 0;
+            padding-top: 20px;
+        }
+        div {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}

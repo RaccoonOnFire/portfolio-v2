@@ -1,0 +1,44 @@
+@use "./header" as header;
+@use "./colors" as colors;
+@use "./animations" as animations;
+body {
+    margin: 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+.dg.ac {
+    display: none;
+}
+canvas {
+    width: 100%;
+    height: 100vh;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+.primary-span {
+    color: colors.$first-color;
+    animation: color-changer 8s infinite alternate;
+}
+.btn {
+    min-width: 280px;
+    padding: 15px 50px;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    pointer-events: auto;
+    cursor: pointer;
+    border: none;
+}
+.primary-btn {
+    background-color: colors.$first-color;
+    animation: button-changer 8s infinite alternate;
+}
