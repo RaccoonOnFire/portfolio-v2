@@ -1,9 +1,12 @@
+@use "./nav" as nav;
 @use "./header" as header;
+@use "./about" as about;
 @use "./colors" as colors;
-@use "./animations" as animations;
+
 body {
     margin: 0;
-    color: white;
+    color: colors.$white-color;
+    background-color: colors.$background-color;
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
 }
@@ -14,20 +17,37 @@ canvas {
     width: 100%;
     height: 100vh;
 }
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 170px;
+}
 h1 {
     font-size: 3rem;
     font-weight: 500;
     letter-spacing: 2px;
     margin: 2rem 0;
 }
+h2 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    span {
+        font-size: 1.5rem;
+    }
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
 p {
     font-size: 1.4rem;
     font-weight: 300;
     margin: 2rem 0;
 }
-.primary-span {
+span {
     color: colors.$first-color;
-    animation: color-changer 8s infinite alternate;
 }
 .btn {
     min-width: 280px;
@@ -40,5 +60,13 @@ p {
 }
 .primary-btn {
     background-color: colors.$first-color;
-    animation: button-changer 8s infinite alternate;
+    box-shadow: 6px 6px 0 -3px darken(colors.$first-color, 10%),
+        6px 6px colors.$first-color;
+}
+
+@media only screen and (max-width: 992px) {
+    section {
+        padding: 0 30px;
+    }
+    
 }

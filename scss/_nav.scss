@@ -1,0 +1,25 @@
+@use "./colors" as colors;
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.1rem;
+    pointer-events: none;
+    z-index: 1;
+    a {
+        color: colors.$white-color;
+        text-decoration: none;
+        pointer-events: auto;
+    }
+    ul {
+        list-style: none;
+
+    }
+    li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+}
