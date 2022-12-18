@@ -1,0 +1,57 @@
+@use "./colors" as colors;
+
+.projects {
+    button {
+        background-color: transparent;
+        color: colors.$secondary-white;
+        border: none;
+        font-size: 4rem;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+    button:hover {
+        color: colors.$first-color;
+    }
+    .projects-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding-top: 50px;
+        .projects-display {
+            display: flex;
+            align-items: center;
+            .project-pc-wrapper {
+                box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+                border-radius: 25px;
+            }
+            .projects-pc-screen {
+                background: colors.$projects-pc-background;
+                padding: 40px;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .projects-pc-bottom {
+                border: 10px solid colors.$projects-pc-bottom;
+                background-color: colors.$projects-pc-bottom;
+                height: 80px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .projects-description {
+            margin-left: 50px;
+            span{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+}
