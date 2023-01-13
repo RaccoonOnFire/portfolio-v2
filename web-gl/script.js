@@ -39,6 +39,7 @@ const projectChangerLeft = () => {
     if(projectsDescriptionCounter < 0) {
         projectsDescriptionCounter = 6
     }
+    playProjetsAnimation()
     projectChanger(projectsDescriptionCounter)
 }
 const projectChangerRight = () => {
@@ -46,6 +47,7 @@ const projectChangerRight = () => {
     if(projectsDescriptionCounter > 6) {
         projectsDescriptionCounter = 0
     }
+    playProjetsAnimation()
     projectChanger(projectsDescriptionCounter)
 }
 const projectChanger = (projectID) => {
@@ -91,6 +93,14 @@ const projectChanger = (projectID) => {
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
+}
+const playProjetsAnimation = () => {
+    document.querySelector(".projets-pc-image").className = "projets-pc-image";
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.querySelector(".projets-pc-image").className = "projets-pc-image projects-animation";
+        });
+      });
 }
 projectsLeftBtn.addEventListener("click", projectChangerLeft)
 projectsRightBtn.addEventListener("click", projectChangerRight)

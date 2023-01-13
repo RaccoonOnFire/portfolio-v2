@@ -141,6 +141,28 @@ nav li {
   font-size: 1.2rem;
 }
 
+.projects-animation {
+  -webkit-animation: image-animation 1.5s;
+          animation: image-animation 1.5s;
+}
+
+@-webkit-keyframes image-animation {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes image-animation {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .projects .projects-container {
     grid-template-columns: 1fr;
@@ -167,6 +189,8 @@ nav li {
   }
   .projects .projects-container .projects-display .projects-pc-screen {
     padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   .projects .projects-container .projects-display .projects-pc-bottom {
     height: 40px;
