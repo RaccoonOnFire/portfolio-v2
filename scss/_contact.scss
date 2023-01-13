@@ -1,0 +1,30 @@
+@use "./colors" as colors;
+.contact {
+    background-color: colors.$secondary-background;
+    a {
+        color: colors.$white-color;
+        text-decoration: none;
+        font-size: 1.4rem;
+        transition: color 0.3s;
+    }
+    a:hover {
+        color: colors.$first-color;
+    }
+    p:first-of-type {
+        margin-top: -20px;
+        padding-top: 0;
+        font-size: 1.1rem;
+        color: transparent;
+        transition: color 0.3s;
+    }
+    h3 {
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    h3:hover {
+        color: colors.$first-color;
+    }
+    h3:hover + p {
+        color: colors.$first-color;
+    }
+}

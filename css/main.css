@@ -135,9 +135,103 @@ nav li {
 }
 .projects .projects-container .projects-description {
   margin-left: 50px;
+  text-align: justify;
 }
 .projects .projects-container .projects-description span {
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .projects .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .projects button {
+    font-size: 3rem;
+  }
+  .projects .projects-container .projects-display {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .projects .projects-container .projects-display .projects-left-btn {
+    order: 2;
+  }
+  .projects .projects-container .projects-display .projects-right-btn {
+    order: 3;
+  }
+  .projects .projects-container .projects-display .project-pc {
+    width: 100%;
+    order: 1;
+  }
+  .projects .projects-container .projects-display .projects-pc-screen {
+    padding: 10px;
+  }
+  .projects .projects-container .projects-display .projects-pc-bottom {
+    height: 40px;
+  }
+  .projects .projects-container .projects-description {
+    margin-left: 0;
+  }
+}
+.skills {
+  align-items: center;
+  background-color: rgb(8, 8, 8);
+}
+.skills .skills-items .skills-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+.skills .skills-items .skills-item p {
+  text-align: right;
+}
+.skills .skills-items .skills-item .skills-bar h3 {
+  text-align: left;
+}
+.skills .skills-items .skills-item .skills-bar .progress-bar {
+  background-color: rgb(143, 143, 143);
+  height: 10px;
+  width: 500px;
+}
+.skills .skills-items .skills-item .skills-bar .fill {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(157, 255, 0);
+}
+.skills .skills-items .skills-item .skills-bar .advanced {
+  width: 90%;
+}
+
+.contact {
+  background-color: rgb(8, 8, 8);
+}
+.contact a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+.contact a:hover {
+  color: rgb(157, 255, 0);
+}
+.contact p:first-of-type {
+  margin-top: -20px;
+  padding-top: 0;
+  font-size: 1.1rem;
+  color: transparent;
+  transition: color 0.3s;
+}
+.contact h3 {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.contact h3:hover {
+  color: rgb(157, 255, 0);
+}
+.contact h3:hover + p {
+  color: rgb(157, 255, 0);
 }
 
 body {
@@ -181,6 +275,11 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
 p {
   font-size: 1.4rem;
   font-weight: 300;
@@ -208,6 +307,6 @@ span {
 
 @media only screen and (max-width: 992px) {
   section {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=main.css.map */

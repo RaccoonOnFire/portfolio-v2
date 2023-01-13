@@ -45,13 +45,55 @@
         }
         .projects-description {
             margin-left: 50px;
-            span{
+            text-align: justify;
+            span {
                 font-size: 1.2rem;
             }
         }
     }
 }
 
-@media only screen and (max-width: 992px) {
-
+@media only screen and (max-width: 1400px) {
+    .projects {
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .projects {
+        button {
+            font-size: 3rem;
+        }
+        .projects-container {
+            .projects-display {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 40px;
+                .projects-left-btn{
+                    order:2;
+                }
+                .projects-right-btn{
+                    order:3;
+                }
+                .project-pc {
+                    width: 100%;
+                    order:1;
+                }
+                .projects-pc-screen {
+                    padding: 10px;
+                    img {
+                    }
+                }
+                .projects-pc-bottom {
+                    height: 40px;
+                }
+            }
+            .projects-description {
+                margin-left: 0;
+                span {
+                }
+            }
+        }
+    }
 }
