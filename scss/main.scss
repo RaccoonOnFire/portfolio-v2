@@ -5,6 +5,9 @@
 @use "./projects" as projects;
 @use "./skills" as skills;
 @use "./contact" as contact;
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     color: colors.$white-color;

@@ -12,6 +12,10 @@ nav a {
   color: white;
   text-decoration: none;
   pointer-events: auto;
+  transition: color 0.5s;
+}
+nav a:hover {
+  color: rgb(157, 255, 0);
 }
 nav ul {
   list-style: none;
@@ -20,7 +24,54 @@ nav li {
   display: inline-block;
   padding: 0 20px;
 }
+nav button {
+  display: none;
+}
 
+.nav-scrolled {
+  background-color: rgba(0, 0, 0, 0.699);
+  transition: background-color 1s;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+  nav .navbar-btn {
+    display: block;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  nav ul {
+    display: none;
+  }
+  .nav-scrolled {
+    background-color: transparent;
+    transition: none;
+  }
+  .show-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-size: 3rem;
+    width: 100%;
+    height: 100vh;
+    padding-left: 0;
+  }
+  .mobile-menu-activated {
+    background-color: rgba(0, 0, 0, 0.897);
+    transition: 0.2s;
+  }
+}
 .header-container {
   position: absolute;
   top: 0;
@@ -240,22 +291,24 @@ nav li {
 .contact a:hover {
   color: rgb(157, 255, 0);
 }
-.contact p:first-of-type {
-  margin-top: -20px;
-  padding-top: 0;
-  font-size: 1.1rem;
-  color: transparent;
-  transition: color 0.3s;
-}
-.contact h3 {
+.contact h2 {
   cursor: pointer;
   transition: color 0.3s;
 }
-.contact h3:hover {
+.contact h2:hover {
   color: rgb(157, 255, 0);
 }
-.contact h3:hover + p {
+.contact .contact-hidden {
   color: rgb(157, 255, 0);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.contact h2:hover + .contact-hidden {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

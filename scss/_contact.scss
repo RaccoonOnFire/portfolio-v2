@@ -10,21 +10,19 @@
     a:hover {
         color: colors.$first-color;
     }
-    p:first-of-type {
-        margin-top: -20px;
-        padding-top: 0;
-        font-size: 1.1rem;
-        color: transparent;
-        transition: color 0.3s;
-    }
-    h3 {
+    h2 {
         cursor: pointer;
         transition: color 0.3s;
     }
-    h3:hover {
+    h2:hover {
         color: colors.$first-color;
     }
-    h3:hover + p {
+    .contact-hidden{
         color: colors.$first-color;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    h2:hover + .contact-hidden {
+        opacity: 1;
     }
 }

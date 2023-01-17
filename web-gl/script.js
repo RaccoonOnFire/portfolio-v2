@@ -23,6 +23,42 @@ SOFTWARE.
 */
 
 "use strict"
+// Navbar Observer Script
+
+const navbar = document.querySelector("nav")
+const header = document.querySelector("header")
+
+const navbarObserver = new IntersectionObserver(
+    function(entries){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                navbar.classList.add("nav-scrolled")
+            }
+            else {
+                navbar.classList.remove("nav-scrolled")
+            }
+        })
+    }
+)
+navbarObserver.observe(header)
+
+// Navbar MobileScript
+const nav = document.querySelector("nav")
+const navItems = document.querySelectorAll("li")
+const navbarMenu = document.querySelector(".navbar-menu")
+const navbarBtn = document.querySelector(".navbar-btn")
+const navbarIcon = document.querySelector(".navbar-icon")
+const toggleMobileMenu = () => {
+    navbarIcon.classList.toggle("fa-xmark")
+    navbarIcon.classList.toggle("fa-bars")
+    navbarMenu.classList.toggle("show-mobile-menu")
+    nav.classList.toggle("mobile-menu-activated")
+}
+navItems.forEach((item) => {
+    item.addEventListener("click", toggleMobileMenu)
+})
+navbarBtn.addEventListener('click', toggleMobileMenu)
+
 // Projects PC script
 
 const projectsLeftBtn = document.querySelector(".projects-left-btn")

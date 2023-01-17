@@ -30,14 +30,18 @@
     </head>
     <body>
         <nav>
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Contact</a></li>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="navbar-btn">
+                <i class="fa-solid fa-bars navbar-icon"></i>
+            </button>
         </nav>
-        <header>
+        <header id="home">
             <canvas></canvas>
             <div class="header-container">
                 <div class="header-items">
@@ -56,7 +60,7 @@
             </div>
         </header>
         <main>
-            <section class="about-container">
+            <section id="about" class="about-container">
                 <h2><span>.01</span> About me</h2>
                 <div class="about-items">
                     <div>
@@ -95,7 +99,7 @@
                 </div>
             </section>
 
-            <section class="projects">
+            <section id="projects" class="projects">
                 <h2><span>.02</span> Projects</h2>
                 <div class="projects-container">
                     <div class="projects-display">
@@ -124,8 +128,12 @@
                         </button>
                     </div>
                     <div class="projects-description">
-                        <h3 class="projects-description-heading">Pizzeria Paulo</h3>
-                        <span class="projects-description-workplace">Interbit Internship</span>
+                        <h3 class="projects-description-heading">
+                            Pizzeria Paulo
+                        </h3>
+                        <span class="projects-description-workplace"
+                            >Interbit Internship</span
+                        >
                         <p class="projects-description-info">
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Autem aut reprehenderit laboriosam debitis
@@ -137,7 +145,7 @@
                 </div>
             </section>
 
-            <!--<section class="skills">
+            <!--<section id="skills" class="skills">
                 <h2><span>.03</span> Skills</h2>
                 <div class="skills-items">
                     <div class="skills-item">
@@ -161,18 +169,30 @@
                 </div>
             </section>-->
 
-            <section class="contact">
-                <h2><span>.04</span> Contact</h2>
-                <h3>Get In Touch</h3>
-                <p>Click to copy email</p>
-                <a href="mailto:lukasz360ig@gmail.com">lukasz360ig@gmail.com</a>
-                <p>© 2022 Łukasz Wolny</p>
-                <a href=""
-                    ><i class="fa-brands fa-square-facebook"></i> Facebook</a
-                ><a href=""><i class="fa-brands fa-linkedin"></i> LinkedIn</a
-                ><a href=""
-                    ><i class="fa-brands fa-square-github"></i> Github</a
-                >
+            <section id="contact" class="contact">
+                <div>
+                    <h2><span>.04</span> Get in touch</h2>
+                    <p class="contact-hidden">Click to copy email</p>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:lukasz360ig@gmail.com"
+                            >lukasz360ig@gmail.com</a
+                        >
+                    </div>
+                    <div>
+                        <p>© 2023 Łukasz Wolny</p>
+                        <a href=""
+                            ><i class="fa-brands fa-square-facebook"></i>
+                            Facebook</a
+                        ><a href=""
+                            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+                        ><a href=""
+                            ><i class="fa-brands fa-square-github"></i>
+                            Github</a
+                        >
+                    </div>
+                </div>
             </section>
         </main>
 
