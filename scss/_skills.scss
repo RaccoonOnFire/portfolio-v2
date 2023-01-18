@@ -1,5 +1,6 @@
 @use "./colors" as colors;
 .skills {
+    background-color: colors.$secondary-background;
     .skills-items {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -24,10 +25,8 @@
                 overflow: hidden;
                 .progress-bar {
                     width: 100%;
-                    transition: 2s;
+                    transition: background-color 2s;
                     height: 100%;
-                    border-top-right-radius: 2px;
-                    border-bottom-right-radius: 2px;
                 }
                 .w-50 {
                     width: 50%;

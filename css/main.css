@@ -92,6 +92,10 @@ nav button {
   height: auto;
   margin-top: -80px;
 }
+.header-items a {
+  text-decoration: none;
+  color: black;
+}
 
 @media only screen and (max-width: 992px) {
   .header-items {
@@ -126,7 +130,7 @@ nav button {
   text-align: justify;
 }
 .about-items div:last-child p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -174,6 +178,7 @@ nav button {
 .projects .projects-container .projects-display .projects-pc-screen img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 .projects .projects-container .projects-display .projects-pc-bottom {
   border: 10px solid rgb(233, 233, 233);
@@ -250,6 +255,9 @@ nav button {
     margin-left: 0;
   }
 }
+.skills {
+  background-color: rgb(8, 8, 8);
+}
 .skills .skills-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -277,10 +285,8 @@ nav button {
 }
 .skills .skills-items .item .progress .progress-bar {
   width: 100%;
-  transition: 2s;
+  transition: background-color 2s;
   height: 100%;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
 }
 .skills .skills-items .item .progress .w-50 {
   width: 50%;
@@ -312,6 +318,13 @@ nav button {
 }
 .contact {
   background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contact a {
   color: white;
@@ -324,6 +337,7 @@ nav button {
 }
 .contact h2 {
   cursor: pointer;
+  font-size: 4rem;
   transition: color 0.3s;
 }
 .contact h2:hover {
@@ -337,7 +351,38 @@ nav button {
 .contact h2:hover + .contact-hidden {
   opacity: 1;
 }
+.contact .contact-bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .contact-bottom-container .contact-bottom {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.contact .contact-bottom-container .contact-bottom .socials {
+  display: flex;
+  gap: 50px;
+}
 
+@media only screen and (max-width: 992px) {
+  .contact h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .contact .contact-bottom-container .contact-bottom {
+    flex-direction: column;
+  }
+  .contact .contact-bottom-container .contact-bottom .socials {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+}
 html {
   scroll-behavior: smooth;
 }

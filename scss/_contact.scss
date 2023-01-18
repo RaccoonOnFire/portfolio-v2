@@ -1,6 +1,13 @@
 @use "./colors" as colors;
 .contact {
     background-color: colors.$background-color;
+    justify-content: center;
+    align-items: center;
+    .contact-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     a {
         color: colors.$white-color;
         text-decoration: none;
@@ -12,17 +19,53 @@
     }
     h2 {
         cursor: pointer;
+        font-size: 4rem;
         transition: color 0.3s;
     }
     h2:hover {
         color: colors.$first-color;
     }
-    .contact-hidden{
+    .contact-hidden {
         color: colors.$first-color;
         opacity: 0;
         transition: opacity 0.5s;
     }
     h2:hover + .contact-hidden {
         opacity: 1;
+    }
+    .contact-bottom-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact-bottom {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            .socials {
+                display: flex;
+                gap: 50px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .contact {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        .contact-bottom-container {
+            .contact-bottom {
+                flex-direction: column;
+                .socials {
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 30px;
+                }
+            }
+        }
     }
 }

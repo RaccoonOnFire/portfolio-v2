@@ -23,37 +23,7 @@ SOFTWARE.
 */
 
 "use strict"
-// Navbar Observer Script
 
-const navbar = document.querySelector("nav")
-const header = document.querySelector("header")
-
-const navbarObserver = new IntersectionObserver(
-    function(entries){
-        entries.forEach(entry => {
-            if(!entry.isIntersecting){
-                navbar.classList.add("nav-scrolled")
-            }
-            else {
-                navbar.classList.remove("nav-scrolled")
-            }
-        })
-    }
-)
-navbarObserver.observe(header)
-
-// Skills Observer
-const progressBar = document.querySelectorAll(".progress-bar")
-const skillObserver = new IntersectionObserver(
-    function(entries){
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("progres-bar-fill")
-            }
-        })
-    }
-)
-progressBar.forEach(progressBar => skillObserver.observe(progressBar))
 
 
 // Navbar MobileScript
@@ -82,6 +52,7 @@ const projectsDescriptionHeading = document.querySelector(".projects-description
 const projectsDescriptionWorkplace = document.querySelector(".projects-description-workplace")
 const projectsDescriptionInfo = document.querySelector(".projects-description-info")
 const projectsAmount = 7
+const projectLink = document.querySelector(".project-link")
 let projectsDescriptionCounter = 0
 
 const projectChangerLeft = () => {
@@ -103,42 +74,49 @@ const projectChangerRight = () => {
 const projectChanger = (projectID) => {
     if (projectID == 0) {
         projetsPcImage.setAttribute("src", "./images/projects/project1.JPG") 
+        projectLink.setAttribute("href", "http://www.pizzeriapaulo.pl") 
         projectsDescriptionHeading.innerHTML = "Pizzeria Paulo"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML = "Website created for a local pizzeria in my city. Created during internships at Interbit Piła. This is one of my most advanced projects in Wordpress. I learned then that the pages must have their own ''taste''."
     }
     if (projectID == 1) {
-        projetsPcImage.setAttribute("src", "./images/projects/project2.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project2.JPG")
+        projectLink.setAttribute("href", "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt5_AgencjaWWW/")  
         projectsDescriptionHeading.innerHTML = "Agencja WWW"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
     if (projectID == 2) {
-        projetsPcImage.setAttribute("src", "./images/projects/project3.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project3.JPG")
+        projectLink.setAttribute("href", "https://www.fotowoltaika-panelefotowoltaiczne.pl")  
         projectsDescriptionHeading.innerHTML = "Photovoltaics"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
     if (projectID == 3) {
-        projetsPcImage.setAttribute("src", "./images/projects/project4.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project4.JPG")
+        projectLink.setAttribute("href", "https://www.pbspolska.pl")  
         projectsDescriptionHeading.innerHTML = "Fence installations"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
     if (projectID == 4) {
-        projetsPcImage.setAttribute("src", "./images/projects/project5.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project5.JPG")
+        projectLink.setAttribute("href", "https://www.holz-stal.pl")  
         projectsDescriptionHeading.innerHTML = "Holz-Stal garages"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
     if (projectID == 5) {
-        projetsPcImage.setAttribute("src", "./images/projects/project6.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project6.JPG")
+        projectLink.setAttribute("href", "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt2_Bruk/")  
         projectsDescriptionHeading.innerHTML = "Paving services"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
     }
     if (projectID == 6) {
-        projetsPcImage.setAttribute("src", "./images/projects/project7.JPG") 
+        projetsPcImage.setAttribute("src", "./images/projects/project7.JPG")
+        projectLink.setAttribute("href", "https://www.wzrokoptyk.bydgoszcz.pl")  
         projectsDescriptionHeading.innerHTML = "Optic Advance"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
         projectsDescriptionInfo.innerHTML = "Blabla"
@@ -155,7 +133,18 @@ const playProjetsAnimation = () => {
 projectsLeftBtn.addEventListener("click", projectChangerLeft)
 projectsRightBtn.addEventListener("click", projectChangerRight)
 
+// Contact copy email script
 
+const contactHeading = document.querySelector(".contact-heading")
+const clickInfo = document.querySelector(".contact-hidden")
+const email = "lukasz360ig@gmail.com"
+
+const copyEmail = () => {
+    navigator.clipboard.writeText(email);
+    clickInfo.innerHTML = "Copied to clipboard";
+}
+
+contactHeading.addEventListener("click", copyEmail)
 // Simulation section
 
 const canvas = document.getElementsByTagName("canvas")[0]
@@ -1949,3 +1938,34 @@ function hashCode(s) {
     }
     return hash
 }
+// Navbar Observer Script
+
+const navbar = document.querySelector("nav")
+const header = document.querySelector("header")
+
+const navbarObserver = new IntersectionObserver(
+    function(entries){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                navbar.classList.add("nav-scrolled")
+            }
+            else {
+                navbar.classList.remove("nav-scrolled")
+            }
+        })
+    }
+)
+navbarObserver.observe(header)
+
+// Skills Observer
+const progressBar = document.querySelectorAll(".progress-bar")
+const skillObserver = new IntersectionObserver(
+    function(entries){
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("progres-bar-fill")
+            }
+        })
+    }
+)
+progressBar.forEach(progressBar => skillObserver.observe(progressBar))
