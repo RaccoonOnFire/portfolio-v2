@@ -42,6 +42,20 @@ const navbarObserver = new IntersectionObserver(
 )
 navbarObserver.observe(header)
 
+// Skills Observer
+const progressBar = document.querySelectorAll(".progress-bar")
+const skillObserver = new IntersectionObserver(
+    function(entries){
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("progres-bar-fill")
+            }
+        })
+    }
+)
+progressBar.forEach(progressBar => skillObserver.observe(progressBar))
+
+
 // Navbar MobileScript
 const nav = document.querySelector("nav")
 const navItems = document.querySelectorAll("li")
@@ -140,6 +154,7 @@ const playProjetsAnimation = () => {
 }
 projectsLeftBtn.addEventListener("click", projectChangerLeft)
 projectsRightBtn.addEventListener("click", projectChangerRight)
+
 
 // Simulation section
 

@@ -1,6 +1,6 @@
 @use "./colors" as colors;
 .contact {
-    background-color: colors.$secondary-background;
+    background-color: colors.$background-color;
     a {
         color: colors.$white-color;
         text-decoration: none;
