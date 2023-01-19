@@ -24,8 +24,6 @@ SOFTWARE.
 
 "use strict"
 
-
-
 // Navbar MobileScript
 const nav = document.querySelector("nav")
 const navItems = document.querySelectorAll("li")
@@ -41,23 +39,29 @@ const toggleMobileMenu = () => {
 navItems.forEach((item) => {
     item.addEventListener("click", toggleMobileMenu)
 })
-navbarBtn.addEventListener('click', toggleMobileMenu)
+navbarBtn.addEventListener("click", toggleMobileMenu)
 
 // Projects PC script
 
 const projectsLeftBtn = document.querySelector(".projects-left-btn")
 const projectsRightBtn = document.querySelector(".projects-right-btn")
 const projetsPcImage = document.querySelector(".projets-pc-image")
-const projectsDescriptionHeading = document.querySelector(".projects-description-heading")
-const projectsDescriptionWorkplace = document.querySelector(".projects-description-workplace")
-const projectsDescriptionInfo = document.querySelector(".projects-description-info")
+const projectsDescriptionHeading = document.querySelector(
+    ".projects-description-heading"
+)
+const projectsDescriptionWorkplace = document.querySelector(
+    ".projects-description-workplace"
+)
+const projectsDescriptionInfo = document.querySelector(
+    ".projects-description-info"
+)
 const projectsAmount = 7
 const projectLink = document.querySelector(".project-link")
 let projectsDescriptionCounter = 0
 
 const projectChangerLeft = () => {
     projectsDescriptionCounter -= 1
-    if(projectsDescriptionCounter < 0) {
+    if (projectsDescriptionCounter < 0) {
         projectsDescriptionCounter = 6
     }
     playProjetsAnimation()
@@ -65,7 +69,7 @@ const projectChangerLeft = () => {
 }
 const projectChangerRight = () => {
     projectsDescriptionCounter += 1
-    if(projectsDescriptionCounter > 6) {
+    if (projectsDescriptionCounter > 6) {
         projectsDescriptionCounter = 0
     }
     playProjetsAnimation()
@@ -73,62 +77,79 @@ const projectChangerRight = () => {
 }
 const projectChanger = (projectID) => {
     if (projectID == 0) {
-        projetsPcImage.setAttribute("src", "./images/projects/project1.JPG") 
-        projectLink.setAttribute("href", "http://www.pizzeriapaulo.pl") 
+        projetsPcImage.setAttribute("src", "./images/projects/project1.JPG")
+        projectLink.setAttribute("href", "http://www.pizzeriapaulo.pl")
         projectsDescriptionHeading.innerHTML = "Pizzeria Paulo"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Website created for a local pizzeria in my city. Created during internships at Interbit Piła. This is one of my most advanced projects in Wordpress. I learned then that the pages must have their own ''taste''."
+        projectsDescriptionInfo.innerHTML =
+            "Website created for a local pizzeria in my city. Created during internship at Interbit Piła. This is one of my better projects in Wordpress. I learned then that the pages must have it's own ''taste''.<br><br> At this moment, all the projects you see here were designed and created all by myself. Some of them could be already modified by website owners."
     }
     if (projectID == 1) {
         projetsPcImage.setAttribute("src", "./images/projects/project2.JPG")
-        projectLink.setAttribute("href", "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt5_AgencjaWWW/")  
-        projectsDescriptionHeading.innerHTML = "Agencja WWW"
+        projectLink.setAttribute(
+            "href",
+            "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt5_AgencjaWWW/"
+        )
+        projectsDescriptionHeading.innerHTML = "Web agency"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "This page is the result of a task that i got during my internship. The goal was to create a website for a web development company.<br><br>It's just a project, not a real company or something. However I really like the design on this one. "
     }
     if (projectID == 2) {
         projetsPcImage.setAttribute("src", "./images/projects/project3.JPG")
-        projectLink.setAttribute("href", "https://www.fotowoltaika-panelefotowoltaiczne.pl")  
-        projectsDescriptionHeading.innerHTML = "Photovoltaics"
+        projectLink.setAttribute(
+            "href",
+            "https://www.fotowoltaika-panelefotowoltaiczne.pl"
+        )
+        projectsDescriptionHeading.innerHTML = "Solis"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "A website created for a company located in Wrocław(Poland), dealing with the photovoltaic panels."
     }
     if (projectID == 3) {
         projetsPcImage.setAttribute("src", "./images/projects/project4.JPG")
-        projectLink.setAttribute("href", "https://www.pbspolska.pl")  
-        projectsDescriptionHeading.innerHTML = "Fence installations"
+        projectLink.setAttribute("href", "https://www.pbspolska.pl")
+        projectsDescriptionHeading.innerHTML = "Pil-Fence"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "Web page made for a company dealing with fence installations."
     }
     if (projectID == 4) {
         projetsPcImage.setAttribute("src", "./images/projects/project5.JPG")
-        projectLink.setAttribute("href", "https://www.holz-stal.pl")  
+        projectLink.setAttribute("href", "https://www.holz-stal.pl")
         projectsDescriptionHeading.innerHTML = "Holz-Stal garages"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "A website created for a Polish manufacturer of steel garages."
     }
     if (projectID == 5) {
         projetsPcImage.setAttribute("src", "./images/projects/project6.JPG")
-        projectLink.setAttribute("href", "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt2_Bruk/")  
-        projectsDescriptionHeading.innerHTML = "Paving services"
+        projectLink.setAttribute(
+            "href",
+            "http://srv27194.microhost.com.pl/2021/4/lucasz_wolny/Projekt2_Bruk/"
+        )
+        projectsDescriptionHeading.innerHTML = "Bruk Pil"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "My second ever Wordpress project. Made for paving services."
     }
     if (projectID == 6) {
         projetsPcImage.setAttribute("src", "./images/projects/project7.JPG")
-        projectLink.setAttribute("href", "https://www.wzrokoptyk.bydgoszcz.pl")  
+        projectLink.setAttribute("href", "https://www.wzrokoptyk.bydgoszcz.pl")
         projectsDescriptionHeading.innerHTML = "Optic Advance"
         projectsDescriptionWorkplace.innerHTML = "Interbit Internship"
-        projectsDescriptionInfo.innerHTML = "Blabla"
+        projectsDescriptionInfo.innerHTML =
+            "My first project in Wordpress. Created for the optical shop."
     }
 }
 const playProjetsAnimation = () => {
-    document.querySelector(".projets-pc-image").className = "projets-pc-image";
+    document.querySelector(".projets-pc-image").className = "projets-pc-image"
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          document.querySelector(".projets-pc-image").className = "projets-pc-image projects-animation";
-        });
-      });
+            document.querySelector(".projets-pc-image").className =
+                "projets-pc-image projects-animation"
+        })
+    })
 }
 projectsLeftBtn.addEventListener("click", projectChangerLeft)
 projectsRightBtn.addEventListener("click", projectChangerRight)
@@ -140,8 +161,8 @@ const clickInfo = document.querySelector(".contact-hidden")
 const email = "lukasz360ig@gmail.com"
 
 const copyEmail = () => {
-    navigator.clipboard.writeText(email);
-    clickInfo.innerHTML = "Copied to clipboard";
+    navigator.clipboard.writeText(email)
+    clickInfo.innerHTML = "Copied to clipboard"
 }
 
 contactHeading.addEventListener("click", copyEmail)
@@ -1943,29 +1964,24 @@ function hashCode(s) {
 const navbar = document.querySelector("nav")
 const header = document.querySelector("header")
 
-const navbarObserver = new IntersectionObserver(
-    function(entries){
-        entries.forEach(entry => {
-            if(!entry.isIntersecting){
-                navbar.classList.add("nav-scrolled")
-            }
-            else {
-                navbar.classList.remove("nav-scrolled")
-            }
-        })
-    }
-)
+const navbarObserver = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            navbar.classList.add("nav-scrolled")
+        } else {
+            navbar.classList.remove("nav-scrolled")
+        }
+    })
+})
 navbarObserver.observe(header)
 
 // Skills Observer
 const progressBar = document.querySelectorAll(".progress-bar")
-const skillObserver = new IntersectionObserver(
-    function(entries){
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("progres-bar-fill")
-            }
-        })
-    }
-)
-progressBar.forEach(progressBar => skillObserver.observe(progressBar))
+const skillObserver = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("progres-bar-fill")
+        }
+    })
+})
+progressBar.forEach((progressBar) => skillObserver.observe(progressBar))

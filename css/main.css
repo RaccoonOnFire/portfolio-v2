@@ -130,7 +130,7 @@ nav button {
   text-align: justify;
 }
 .about-items div:last-child p {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -191,7 +191,6 @@ nav button {
 }
 .projects .projects-container .projects-description {
   margin-left: 50px;
-  text-align: justify;
 }
 .projects .projects-container .projects-description span {
   font-size: 1.2rem;
